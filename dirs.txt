@@ -1,0 +1,16 @@
+ O volume na unidade C ‚ OS
+ O N£mero de S‚rie do Volume ‚ 4AB6-E2B4
+
+ Pasta de C:\Users\laris\Documents\Estudos\codenation
+
+11/06/2020  00:36    <DIR>          .
+11/06/2020  00:36    <DIR>          ..
+21/05/2020  22:33               106 .gitignore
+09/06/2020  01:43    <DIR>          codenation_windows
+09/06/2020  01:42         7.168.041 codenation_windows.zip
+11/06/2020  00:36                 0 dirs.txt
+11/06/2020  00:35                15 requirements.txt
+08/06/2020  02:07    <DIR>          selection
+10/06/2020  23:58    <DIR>          venv
+               4 arquivo(s)      7.168.162 bytes
+               5 pasta(s)   13.056.872.448 bytes dispon¡veis
