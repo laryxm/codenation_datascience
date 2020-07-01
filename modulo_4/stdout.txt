@@ -1,0 +1,26 @@
+============================= test session starts =============================
+platform win32 -- Python 3.7.7, pytest-4.6.2, py-1.8.0, pluggy-0.12.0 -- C:\Users\laris\.conda\envs\cdn\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\laris\codenation\data-science-1
+collecting ... collected 5 items
+
+test_submit.py::test_q1 PASSED                                           [ 20%]
+test_submit.py::test_q2 PASSED                                           [ 40%]
+test_submit.py::test_q3 PASSED                                           [ 60%]
+test_submit.py::test_q4 PASSED                                           [ 80%]
+test_submit.py::test_q5 PASSED                                           [100%]
+
+============================== warnings summary ===============================
+C:\Users\laris\AppData\Roaming\Python\Python37\site-packages\matplotlib\backend_bases.py:57
+C:\Users\laris\AppData\Roaming\Python\Python37\site-packages\matplotlib\backend_bases.py:57
+  C:\Users\laris\AppData\Roaming\Python\Python37\site-packages\matplotlib\backend_bases.py:57: DeprecationWarning: PILLOW_VERSION is deprecated and will be removed in a future release. Use __version__ instead.
+    from PIL import PILLOW_VERSION
+
+C:\Users\laris\AppData\Roaming\Python\Python37\site-packages\ipywidgets\widgets\widget_selection.py:9
+C:\Users\laris\AppData\Roaming\Python\Python37\site-packages\ipywidgets\widgets\widget_selection.py:9
+  C:\Users\laris\AppData\Roaming\Python\Python37\site-packages\ipywidgets\widgets\widget_selection.py:9: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3,and in 3.9 it will stop working
+    from collections import Mapping, Iterable
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+--- generated xml file: C:\Users\laris\codenation\data-science-1\output.xml ---
+==================== 5 passed, 4 warnings in 1.90 seconds =====================

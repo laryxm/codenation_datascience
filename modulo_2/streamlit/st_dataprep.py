@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 def main():
 
@@ -11,10 +12,56 @@ def main():
 #    #st.audio("record.wave")
 #    st.subheader("Vídeo")
 #    #st.video("sentiment_motion.mov")
-    st.markdown("File uploaded")
+
+    # st.markdown("File uploaded")
+
+    #st.title("Data Preparation - Codenation DS")
+    st.image("codenation_logo.png")
+
+
     file = st.file_uploader("Choose your file",type ="csv")
     if file is not None:
         st.markdown("Não está vazio")
+
+   
+    file  = "titanic_train.csv"
+
+    if file is not None: 
+        slider = st.slider("Registros de 5 a 100", 5,100)
+        df = pd.read_csv(file)
+        st.dataframe(df.head(slider))
+        st.write("Dataset shape:" , df.shape)
+
+        # Describe the dataset
+        st.write(df.describe())
+
+        # Select the dataset keys
+        multiselect_keys = st.multiselect("Choose the keys", (df.columns))
+        st.write("We have " , df[multiselect_keys].drop_duplicates().shape[0], " distinct key values.")
+
+        # Select the target
+        select_target = st.selectbox("Select the target", (df.columns), index  = 1)    
+        
+        # List the columns types
+        int_col_list = df.dtypes[df.dtypes == "int64"].index
+        float_col_list = df.dtypes[df.dtypes == "float64"].index
+        object_col_list = df.dtypes[df.dtypes == "object"].index
+
+        # Show the target  ratio
+        if ("int" in str(df.dtypes.loc[select_target])):
+            st.write(df[select_target].value_counts(normalize = True))
+        elif ("object" in str(df.dtypes.loc[select_target])):
+            st.write(df[select_target].value_counts(normalize = True))
+        elif ("float" in str(df.dtypes.loc[select_target])):
+            st.write(df[select_target].mean())
+        
+        # Show the total of nulls in the dataset 
+        st.markdown("nan values")
+        #st.table(df.head(slider))
+        st.dataframe(df.isna().sum(), width=500, height=500)
+        #st.dataframe(df.groupby('Sex').agg({'Age':'mean','Survived':'mean'}))
+        st.dataframe(df.groupby('Sex').agg({'Age':'mean','Survived':'mean'}))
+
 
     st.title("Hello!")
     
