@@ -1,0 +1,3 @@
+[submodule "projetoFinal"]
+	path = projetoFinal
+	url = git@github.com:laryxm/recsys_studies.git
